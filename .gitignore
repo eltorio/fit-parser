@@ -1,3 +1,4 @@
 node_modules/
 .idea
 .directory
+dist/fit-parser-babelized.js
