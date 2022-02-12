@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { getArrayBuffer, calculateCRC, readRecord } from './binary';
 
 export default class FitParser {

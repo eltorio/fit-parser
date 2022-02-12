@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { getMessageName, getFieldObject } from './fit';
 
 export function getFitMessage(messageNum) {

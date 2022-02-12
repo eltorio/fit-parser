@@ -1,3 +1,4 @@
+/* eslint-disable */
 // some unit conversion constants
 const metersInOneKilometer = 1000;
 const secondsInOneHour = 3600;
