@@ -16,14 +16,14 @@ export interface FitData {
     protocolVersion: number;
     profileVersion: number;
     file_creator: { software_version: number; },
-    activity: Activity;
+    records: Record[];
 }
 
 export interface Activity {
-    timestamp: string;
-    total_timer_time: Number;
+    timestamp: Date;
+    total_timer_time: number;
     local_timestamp: string;
-    num_sessions: Number;
+    num_sessions: number;
     type: string;
     event: string;
     event_type: string;
@@ -40,22 +40,22 @@ export interface SessionBase {
 
     timestamp: string;
     start_time: string;
-    start_position_lat: Number;
-    start_position_long: Number;
-    total_elapsed_time: Number;
-    total_timer_time: Number;
-    total_distance: Number;
-    total_cycles: Number;
+    start_position_lat: number;
+    start_position_long: number;
+    total_elapsed_time: number;
+    total_timer_time: number;
+    total_distance: number;
+    total_cycles: number;
     message_index: {
         0: boolean;
-        value: Number;
+        value: number;
         reserved: boolean;
         selected: boolean;
     }
-    total_calories: Number;
-    avg_speed: Number;
-    first_lap_index: Number;
-    num_laps: Number;
+    total_calories: number;
+    avg_speed: number;
+    first_lap_index: number;
+    num_laps: number;
     event: string;
     event_type: string;
 }
@@ -73,30 +73,32 @@ export interface Lap extends SessionBase {
 }
 
 export interface Record {
-    timestamp: string;
-    elapsed_time: Number;
-    timer_time: Number;
-    position_lat: Number;
-    position_long: Number;
-    distance: Number;
-    speed: Number;
-    heart_rate: Number;
-    cadence: Number;
+    altitude: number,
+    timestamp: Date;
+    elapsed_time: number;
+    enhanced_altitude: number;
+    timer_time: number;
+    position_lat: number;
+    position_long: number;
+    distance: number;
+    speed: number;
+    heart_rate: number;
+    cadence: number;
 }
 
 export interface Event {
     timestamp: string;
-    data: Number;
+    data: number;
     event: string;
     event_type: string;
-    event_group: Number;
+    event_group: number;
 }
 
 export interface DeviceInfo {
     timestamp: string;
-    serial_number: Number;
+    serial_number: number;
     manufacturer: string;
-    product: Number;
-    software_version: Number;
-    device_index: Number;
+    product: number;
+    software_version: number;
+    device_index: number;
 }
